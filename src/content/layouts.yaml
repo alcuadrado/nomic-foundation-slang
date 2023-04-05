@@ -1,0 +1,19 @@
+documentation:
+  title: documentation
+  folders:
+    - getting-started
+    - config
+    - hardhat-network
+    - hardhat-runner
+    - guides
+    - advanced
+    - troubleshooting
+    - errors
+    - reference
+    - buidler-documentation
+    - metamask-issue
+
+tutorial:
+  title: tutorial
+  folders:
+    - tutorial
