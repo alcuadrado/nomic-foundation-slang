@@ -1,12 +1,12 @@
-import React, { FC, useContext, useEffect, useState } from 'react';
+import React, { FC, useContext, useEffect } from 'react';
 import { styled } from 'linaria/react';
 import Link from 'next/link';
 
 import { ThemeContext, media, tm, tmDark, tmSelectors } from '../themes';
 import Hamburger from './ui/Hamburger';
-import MobileMenu from './ui/MobileMenu';
+
 import DesktopMenu from './ui/DesktopMenu';
-import { menuItemsList, socialsItems } from '../config';
+import { menuItemsList } from '../config';
 import NomicFoundationLogo from '../assets/nomic-foundation-logo';
 import NomicFoundationLogoDark from '../assets/nomic-foundation-logo_dark';
 
@@ -24,7 +24,7 @@ const Navigation = styled.nav`
 
   box-sizing: border-box;
   padding: 32px 0px;
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.25s;
   background-color: ${tm(({ colors }) => colors.navbarFill)};
   border-top: 1px solid;
   border-bottom: 1px solid;

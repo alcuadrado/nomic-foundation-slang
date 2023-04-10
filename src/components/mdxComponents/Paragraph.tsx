@@ -16,12 +16,6 @@ const StyledP = styled.p`
   ${tmSelectors.dark} {
     color: ${tmDark(({ colors }) => colors.neutral800)};
   }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.neutral800)};
-    }
-  }
 `;
 
 const Paragraph = ({ children }: Props) => {

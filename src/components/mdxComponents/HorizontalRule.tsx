@@ -13,12 +13,6 @@ const StyledHorizontalRule = styled.ul`
   ${tmSelectors.dark} {
     border-top: 1px solid ${tmDark(({ colors }) => colors.neutral400)};
   }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      border-top: 1px solid ${tmDark(({ colors }) => colors.neutral400)};
-    }
-  }
 `;
 
 const HorizontalRule = ({ children }: Props) => {

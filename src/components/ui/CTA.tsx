@@ -1,46 +1,72 @@
-import React from "react";
-import { styled } from "linaria/react";
-import { media, tm } from "../../themes";
+import React from 'react';
+import { styled } from 'linaria/react';
+import { media, tm, tmDark, tmSelectors } from '../../themes';
 
 const A = styled.a`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 22px;
-  border: none;
-  border-radius: 4px;
-  width: fit-content;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0;
-  white-space: nowrap;
-  text-align: center;
-  color: ${tm(({ colors }) => colors.neutral900)};
-  background-color: ${tm(({ colors }) => colors.accent800)};
-  transition: all ease-out 0.3s;
+  --bgColor: ${tm(({ colors }) => colors.ctaBg)};
+  --borderColor: ${({ color }) => (!!color ? color : 'transparent')};
+  position: relative;
+  height: fit-content;
   cursor: pointer;
-  &:hover {
-    background-color: ${tm(({ colors }) => colors.accent200)};
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-size: 19px;
+  color: ${tm(({ colors }) => colors.font300)};
+  border: unset;
+  padding: 24px 56px;
+  border-radius: 40px;
+  background-color: transparent;
+
+  &:before {
+    background: var(--bgColor);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    position: absolute;
+    border: solid 1px ${({ color }) => (!!color ? color : 'transparent')};
+    content: ' ';
+    display: block;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: -1px;
+    left: -1px;
   }
-  ${media.md} {
-    font-size: 15px;
-    line-height: 24px;
-    letter-spacing: 0;
-    text-align: center;
-    padding: 12px 28px;
+
+  &:hover {
+    cursor: pointer;
+    &:before {
+      border: solid 2px ${({ color }) => (!!color ? color : 'transparent')};
+      margin-left: -1px;
+      margin-top: -1px;
+    }
+  }
+  ${tmSelectors.dark} {
+    background-color: transparent;
+
+    color: ${tmDark(({ colors }) => colors.font300)};
+    --bgColor: ${tmDark(({ colors }) => colors.ctaBg)};
   }
 
   &.secondary {
-    width: 100%;
-    border: 1px solid ${tm(({ colors }) => colors.neutral700)};
-    text-align: center;
+    --secondaryBorderColor: ${tm(({ colors }) => colors.ctaSecondaryBorder)};
     background: ${tm(({ colors }) => colors.transparent)};
-    transition: 0.3s;
+    color: ${tm(({ colors }) => colors.ctaSecondaryColor)};
+    outline: 1px solid var(--secondaryBorderColor);
 
+    &:before {
+      display: none;
+    }
     &:hover {
-      border-color: ${tm(({ colors }) => colors.transparent)};
-      background-color: ${tm(({ colors }) => colors.secondaryCTAHover)};
+      outline: 2px solid var(--secondaryBorderColor);
+    }
+
+    ${tmSelectors.dark} {
+      color: ${tmDark(({ colors }) => colors.ctaSecondaryColor)};
+      --secondaryBorderColor: ${tmDark(
+        ({ colors }) => colors.ctaSecondaryBorder
+      )};
     }
   }
 
@@ -55,13 +81,13 @@ type Props = React.PropsWithChildren<{
   onClick?: () => void;
 }>;
 
-const CTA = ({ children, href, variant = "", onClick }: Props) => {
-  if ((href === "" || href === undefined || href === null) && !onClick) {
-    throw new Error("CTA should have a href prop or a onClick prop");
+const CTA = ({ children, href, variant = '', onClick }: Props) => {
+  if ((href === '' || href === undefined || href === null) && !onClick) {
+    throw new Error('CTA should have a href prop or a onClick prop');
   }
   return (
     <A
-      as={onClick ? "button" : "a"}
+      as={onClick ? 'button' : 'a'}
       className={variant}
       href={href ?? undefined}
       onClick={onClick ?? undefined}

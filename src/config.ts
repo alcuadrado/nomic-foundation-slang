@@ -42,7 +42,7 @@ export const menuItemsList: MenuItemType[] = [
   },
   {
     label: 'Building Blocks',
-    href: '/',
+    href: '/docs',
   },
   {
     label: 'Jobs',

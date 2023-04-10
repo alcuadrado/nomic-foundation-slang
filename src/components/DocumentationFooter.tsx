@@ -45,13 +45,6 @@ const PageEdit = styled.div`
     color: ${tmDark(({ colors }) => colors.editPageColor)};
     border-color: ${tmDark(({ colors }) => colors.neutral400)};
   }
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      stroke: ${tmDark(({ colors }) => colors.editPageColor)};
-      color: ${tmDark(({ colors }) => colors.editPageColor)};
-      border-color: ${tmDark(({ colors }) => colors.neutral400)};
-    }
-  }
 `;
 
 const PageNavigation = styled.div`
@@ -78,11 +71,6 @@ const PageNavigationLinkWrapper = styled.div`
 
   ${tmSelectors.dark} {
     color: ${tmDark(({ colors }) => colors.accent700)};
-  }
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.accent700)};
-    }
   }
 `;
 

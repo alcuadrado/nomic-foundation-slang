@@ -44,16 +44,6 @@ const StyledMdLinkContainer = styled.span`
       color: ${tm(({ colors }) => colors.link)};
     }
   }
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      & svg {
-        stroke: ${tmDark(({ colors }) => colors.neutral800)};
-      }
-      & code {
-        color: ${tm(({ colors }) => colors.link)};
-      }
-    }
-  }
 `;
 
 const getPathFromHref = (href: string) => {

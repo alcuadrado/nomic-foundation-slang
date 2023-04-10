@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { socialsItems } from '../../config';
 import { MenuItemType } from '../types';
 import {
   DesktopMenuContainer,

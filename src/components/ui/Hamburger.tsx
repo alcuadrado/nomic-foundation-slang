@@ -49,11 +49,6 @@ const HamburgerLine = styled.div<{ isOpen: boolean }>`
     ${tmSelectors.dark} {
       background-color: ${tmDark(({ colors }) => colors.neutral900)};
     }
-    ${media.mqDark} {
-      ${tmSelectors.auto} {
-        background-color: ${tmDark(({ colors }) => colors.neutral900)};
-      }
-    }
   }
 `;
 

@@ -55,11 +55,6 @@ const Container = styled.div`
     ${tmSelectors.dark} {
       background-color: ${tmDark(({ colors }) => colors.neutral0)};
     }
-    ${media.mqDark} {
-      ${tmSelectors.auto} {
-        background-color: ${tmDark(({ colors }) => colors.neutral0)};
-      }
-    }
   }
   height: 100vh;
   min-width: 320px;
@@ -93,7 +88,7 @@ export const SidebarContainer = styled.aside<{ isSidebarOpen: boolean }>`
   height: calc(100vh - 136px);
   display: flex;
   overflow-y: scroll;
-  transition: all ease-out 0.25s;
+  transition: all ease-in-out 0.25s;
   z-index: 1;
   background-color: ${tm(({ colors }) => colors.neutral0)};
 
@@ -107,21 +102,11 @@ export const SidebarContainer = styled.aside<{ isSidebarOpen: boolean }>`
       border-right: 1px solid ${tmDark(({ colors }) => colors.border)};
       background-color: ${tmDark(({ colors }) => colors.neutral0)};
     }
-    ${media.mqDark} {
-      ${tmSelectors.auto} {
-        border-right: 1px solid ${tmDark(({ colors }) => colors.border)};
-        background-color: ${tmDark(({ colors }) => colors.neutral0)};
-      }
-    }
   }
   ${tmSelectors.dark} {
     background-color: ${tmDark(({ colors }) => colors.neutral0)};
   }
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      background-color: ${tmDark(({ colors }) => colors.neutral0)};
-    }
-  }
+
   ${SidebarMask} {
     display: none;
     ${media.md} {
@@ -167,12 +152,6 @@ const Content = styled.section`
   color: ${tm(({ colors }) => colors.neutral900)};
   ${tmSelectors.dark} {
     color: ${tmDark(({ colors }) => colors.neutral900)};
-  }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.neutral900)};
-    }
   }
 `;
 
@@ -272,6 +251,7 @@ const DocumentationLayout = ({
             </SidebarMask>
             <MobileSidebarMenuMask data-open={isSidebarOpen}>
               <MobileSidebarMenu
+                isDocumentation
                 menuItems={menuItemsList}
                 socialsItems={socialsItems}
                 sidebarElementsList={sidebarLayout}

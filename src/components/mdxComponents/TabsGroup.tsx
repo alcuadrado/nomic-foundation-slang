@@ -38,23 +38,6 @@ const StyledTabButton = styled.div<{ value: string }>`
       color: ${tmDark(({ colors }) => colors.neutral400)};
     }
   }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.neutral600)};
-      background-color: ${tmDark(({ colors }) => colors.tabBackground)};
-      &:hover {
-        background-color: ${tmDark(({ colors }) => colors.tabBackgroundHover)};
-        color: ${tmDark(({ colors }) => colors.neutral400)};
-      }
-      &[data-selected='true'] {
-        background-color: ${tmDark(
-          ({ colors }) => colors.tabBackgroundSelected
-        )};
-        color: ${tmDark(({ colors }) => colors.neutral400)};
-      }
-    }
-  }
 `;
 
 const StyledTabsContainer = styled.div`
