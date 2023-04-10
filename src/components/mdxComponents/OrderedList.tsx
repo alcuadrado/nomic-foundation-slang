@@ -20,12 +20,6 @@ const StyledOrderedList = styled.ol`
   ${tmSelectors.dark} {
     color: ${tmDark(({ colors }) => colors.neutral800)};
   }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.neutral800)};
-    }
-  }
 `;
 
 const OrderedList = ({ children }: Props) => {

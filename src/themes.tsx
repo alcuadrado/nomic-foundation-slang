@@ -29,7 +29,6 @@ export const media = {
 export const tmSelectors = {
   dark: 'body.DARK &',
   hcDark: 'body.HC_DARK &',
-  auto: 'body.AUTO &',
 };
 
 export const lightPalette = {
@@ -83,7 +82,7 @@ export const lightPalette = {
   neutralBackground:
     'linear-gradient(180deg, #FFFFFF 7.96%, rgba(255, 255, 255, 0.484844) 18.71%, rgba(255, 255, 255, 0) 28.83%, rgba(255, 255, 255, 0) 68.82%, #FFFFFF 91.43%);',
   ctaBg:
-    'linear-gradient(71.28deg, #fff4ee -21.07%, #ffffff 67.73%), linear-gradient(101deg, #fadeca, #c8e9fc)',
+    'linear-gradient(71.28deg, #191B22 -21.07%, #20232A 67.73%),linear-gradient(90.65deg, #FADECA 17.08%, #BEE4FA 87.78%)',
 
   link: '#f2c09b',
   autoThemeButton: '#6C6F74',
@@ -102,10 +101,14 @@ export const lightPalette = {
   font50: '#888890',
   font100: '#1B182D',
   font200: '#404146',
+  font300: '#EDEDF0',
   navbarBlur: '#ffffffb2',
   navbarFill: '#FFFFFF',
   navbarBorder: '#DCDCE1',
   bg100: '#F7F7FA',
+  backButton: '#6E6F70',
+  ctaSecondaryColor: '#515259',
+  ctaSecondaryBorder: '#CACAD2',
 };
 
 export const darkPalette = {
@@ -174,12 +177,17 @@ export const darkPalette = {
   font50: '#888890',
   font100: '#EDEDF0',
   font200: '#EDEDF0',
+  font300: '#404146',
+
   ctaBg:
-    'linear-gradient(71.28deg, #191B22 -21.07%, #20232A 67.73%),linear-gradient(90.65deg, #FADECA 17.08%, #BEE4FA 87.78%)',
+    'linear-gradient(71.28deg, #fff4ee -21.07%, #ffffff 67.73%), linear-gradient(101deg, #fadeca, #c8e9fc)',
   navbarBlur: '#13141ACC',
   navbarFill: '#20232A',
   navbarBorder: '#61626B',
   bg100: '#13141A',
+  backButton: '#F2F2F2',
+  ctaSecondaryColor: '#CACAD2',
+  ctaSecondaryBorder: '#61626B',
 } as Palette;
 
 type Palette = typeof lightPalette;

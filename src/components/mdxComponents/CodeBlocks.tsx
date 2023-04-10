@@ -42,13 +42,6 @@ const StyledCode = styled.code`
     background-color: ${tmDark(({ colors }) => colors.codeBlockBackground)};
     color: ${tmDark(({ colors }) => colors.codeColor)};
   }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      background-color: ${tmDark(({ colors }) => colors.codeBlockBackground)};
-      color: ${tmDark(({ colors }) => colors.codeColor)};
-    }
-  }
 `;
 
 const StyledPre = styled.pre`
@@ -95,16 +88,6 @@ const StyledPre = styled.pre`
     border: 1px solid ${tmDark(({ colors }) => colors.codeBlockBorder)};
     & code {
       color: ${tmDark(({ colors }) => colors.preCodeColor)};
-    }
-  }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      background-color: ${tmDark(({ colors }) => colors.codeBlockBackground)};
-      border: 1px solid ${tmDark(({ colors }) => colors.codeBlockBorder)};
-      & code {
-        color: ${tmDark(({ colors }) => colors.preCodeColor)};
-      }
     }
   }
 `;

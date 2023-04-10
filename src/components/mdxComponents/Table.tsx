@@ -29,12 +29,6 @@ const StyledTable = styled.table`
   ${tmSelectors.dark} {
     color: ${tmDark(({ colors }) => colors.neutral800)};
   }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.neutral800)};
-    }
-  }
 `;
 
 const Table = ({ children }: Props) => {

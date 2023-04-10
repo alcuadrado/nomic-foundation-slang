@@ -50,3 +50,10 @@ export interface BannerProps {
 export interface DefaultBannerProps {
   content: DefaultBannerContent;
 }
+
+export enum NavigationPagesPaths {
+  HOME = '/',
+  PLUGINS = '/plugins',
+  DOCUMENTATION = '/docs',
+  TUTORIAL = '/tutorial',
+}

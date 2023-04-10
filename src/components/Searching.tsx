@@ -51,21 +51,6 @@ const Container = styled.div`
       ({ colors }) => colors.searchShadow
     )};
   }
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      --docsearch-searchbox-background: ${tmDark(
-        ({ colors }) => colors.neutral0
-      )};
-      --docsearch-primary-color: ${tmDark(({ colors }) => colors.accent700)};
-      --docsearch-text-color: ${tmDark(({ colors }) => colors.neutral800)};
-      --docsearch-searchbox-focus-background: ${tmDark(
-        ({ colors }) => colors.neutral0
-      )};
-      --docsearch-searchbox-shadow-custom: ${tmDark(
-        ({ colors }) => colors.searchShadow
-      )};
-    }
-  }
 `;
 
 const Searching = () => {

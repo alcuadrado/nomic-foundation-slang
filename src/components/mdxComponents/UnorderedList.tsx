@@ -19,12 +19,6 @@ const StyledUnorderedList = styled.ul`
   ${tmSelectors.dark} {
     color: ${tmDark(({ colors }) => colors.neutral800)};
   }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.neutral800)};
-    }
-  }
 `;
 
 const UnorderedList = ({ children }: Props) => {

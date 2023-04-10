@@ -48,12 +48,6 @@ const Author = styled.a`
     color: ${tmDark(({ colors }) => colors.autoThemeButton)};
     border-color: ${tmDark(({ colors }) => colors.autoThemeButton)};
   }
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.autoThemeButton)};
-      border-color: ${tmDark(({ colors }) => colors.autoThemeButton)};
-    }
-  }
 `;
 
 const Description = styled.p`
@@ -65,11 +59,6 @@ const Description = styled.p`
 
   ${tmSelectors.dark} {
     color: ${tmDark(({ colors }) => colors.neutral800)};
-  }
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.neutral800)};
-    }
   }
 `;
 
@@ -91,12 +80,6 @@ const Tag = styled.div`
   ${tmSelectors.dark} {
     background-color: ${tmDark(({ colors }) => colors.tagBackground)};
     color: ${tmDark(({ colors }) => colors.codeColor)};
-  }
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      background-color: ${tmDark(({ colors }) => colors.tagBackground)};
-      color: ${tmDark(({ colors }) => colors.codeColor)};
-    }
   }
 `;
 

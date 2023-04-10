@@ -28,12 +28,6 @@ const Container = styled.section`
   ${tmSelectors.dark} {
     background-color: ${tmDark(({ colors }) => colors.cookiePopUpBackground)};
   }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      background-color: ${tmDark(({ colors }) => colors.cookiePopUpBackground)};
-    }
-  }
 `;
 
 const Title = styled.h3`
@@ -46,12 +40,6 @@ const Title = styled.h3`
   mix-blend-mode: normal;
   ${tmSelectors.dark} {
     color: ${tmDark(({ colors }) => colors.neutral900)};
-  }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.neutral900)};
-    }
   }
 `;
 
@@ -66,29 +54,11 @@ const Text = styled.p`
   ${tmSelectors.dark} {
     color: ${tmDark(({ colors }) => colors.cookieTextColor)};
   }
-
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.cookieTextColor)};
-    }
-  }
 `;
 
 const ButtonsContainer = styled.div`
   display: flex;
   margin-top: 16px;
-
-  & .secondary {
-    ${tmSelectors.dark} {
-      color: ${tmDark(({ colors }) => colors.cookieTextColor)};
-    }
-
-    ${media.mqDark} {
-      ${tmSelectors.auto} {
-        color: ${tmDark(({ colors }) => colors.cookieTextColor)};
-      }
-    }
-  }
 `;
 
 const CTAWrapper = styled.div`
@@ -113,11 +83,6 @@ const ReadMoreLink = styled.a`
   }
   ${tmSelectors.dark} {
     color: ${tmDark(({ colors }) => colors.neutral900)};
-  }
-  ${media.mqDark} {
-    ${tmSelectors.auto} {
-      color: ${tmDark(({ colors }) => colors.neutral900)};
-    }
   }
 `;
 
