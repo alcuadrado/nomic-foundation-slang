@@ -17,11 +17,8 @@ type Props = {
 const DesktopMenu = ({ menuItems, isDocumentation = false }: Props) => (
   <DesktopMenuContainer>
     <MenuItemsContainer>
-      {isDocumentation ? (
-        <MenuItem>
-          <Searching />
-        </MenuItem>
-      ) : null}
+      {/* <Searching /> */}
+
       {menuItems.map((menuItem) => {
         return (
           <MenuItem key={menuItem.label}>
