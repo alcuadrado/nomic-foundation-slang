@@ -44,10 +44,10 @@ export const menuItemsList: MenuItemType[] = [
     label: 'Building Blocks',
     href: '/docs',
   },
-  {
-    label: 'Jobs',
-    href: '/',
-  },
+  // {
+  //   label: 'Jobs',
+  //   href: '/',
+  // },
 ];
 
 export enum Tools {
